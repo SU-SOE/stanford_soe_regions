@@ -31,8 +31,11 @@ function _full_width_super_hero_render_region($block_html, $block) {
  * Implements hook_page_alter().
  */
 function stanford_soe_regions_page_alter(&$page) {
-  //Moving location where regions_module is appended.
-  $regions_module = $page['page_bottom']['regions_module'];
-  $page['admin_shortcuts']['regions_module'] = $regions_module;
+  //TODO: Add logic to this if statement to only add region when needed.
+  if (!path_is_admin(current_path())) {
+    //Moving location where regions_module is appended.
+    $regions_module = $page['page_bottom']['regions_module'];
+    $page['admin_shortcuts']['regions_module'] = $regions_module;
+  }
   unset($page['page_bottom']['regions_module']);
 }
