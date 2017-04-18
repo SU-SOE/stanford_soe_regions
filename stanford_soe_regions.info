@@ -1,0 +1,7 @@
+name = Stanford SOE Regions
+description = Adds regions to SOE.
+core = 7.x
+package = Stanford
+version = 7.x-1.0-dev
+project = stanford_soe_regions
+dependencies[] = regions
