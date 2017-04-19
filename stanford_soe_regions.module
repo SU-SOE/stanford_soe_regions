@@ -31,11 +31,28 @@ function _full_width_super_hero_render_region($block_html, $block) {
  * Implements hook_page_alter().
  */
 function stanford_soe_regions_page_alter(&$page) {
-  //TODO: Add logic to this if statement to only add region when needed.
-  if (!path_is_admin(current_path())) {
-    //Moving location where regions_module is appended.
-    $regions_module = $page['page_bottom']['regions_module'];
-    $page['admin_shortcuts']['regions_module'] = $regions_module;
-  }
+  //Printing in page template so no need for appending to the page_bottom variable.
   unset($page['page_bottom']['regions_module']);
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function stanford_soe_regions_preprocess_page(&$variables) {
+  // TODO: Add additional logic to swap page template based on DM context here.
+  if (!path_is_admin(current_path())) {
+    $variables['theme_hook_suggestions'][] = 'digital_magazine_page';
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function stanford_soe_regions_theme() {
+  return array(
+    'digital_magazine_page' =>  array(
+      'template' => 'templates/digital-magazine-page',
+      'render element' => 'page'
+    ),
+  );
 }
