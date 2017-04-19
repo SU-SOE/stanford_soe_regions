@@ -8,10 +8,9 @@
   <?php endif; ?>
   <!-- /#admin-shortcuts -->
   <?php if ($page['full_width_super_hero']): ?>
-    <div id="full-width-super-hero-wrapper" class="row-fluid fullwidth">
+    <div id="full-width-super-hero" class="row-fluid fullwidth">
       <div class="container"> <?php print render($page['full_width_super_hero']); ?> </div>
     </div>
-    <?php hide($page['full_width_super_hero']); ?>
   <?php endif; ?>
   <div id="global-header">
     <div class="container">
