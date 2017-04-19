@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_install().
+ */
+function stanford_soe_regions_install() {
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'full_width_super_hero';
+  $context->description = 'Context for full width super hero';
+  $context->tag = 'Full Width Super Hero';
+  $context->conditions = array();
+  $context->reactions = array();
+  $context->condition_mode = 0;
+  context_save($context);
+}
+
+/**
+ * Implements hook_enable().
+ */
+function stanford_soe_regions_enable() {
+  /*
+   *mymodule_cache_rebuild();
+   */
+  /* Your code here */
+}
+
+/**
+ * Implements hook_disable().
+ */
+function stanford_soe_regions_disable() {
+  /*
+   *mymodule_cache_rebuild();
+   */
+  /* Your code here */
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function stanford_soe_regions_uninstall() {
+  $context_fwsh = context_load('full_width_super_hero');
+  context_delete($context_fwsh);
+}
