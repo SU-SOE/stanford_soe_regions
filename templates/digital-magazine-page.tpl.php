@@ -263,6 +263,24 @@
     </div>
   </div>
   <!-- /#main, /#main-wrapper -->
+  <?php if ($page['content_body_lower']): ?>
+    <div id="content-body-lower" class="container">
+      <div class="row-fluid content-body"> <?php print render($page['content_body_lower']); ?> </div>
+    </div>
+  <?php endif; ?>
+  <!-- /#content-body-lower -->
+  <?php if ($page['full_width_middle']): ?>
+    <div id="full-width-middle" class="row-fluid fullwidth">
+      <div class="container"> <?php print render($page['full_width_middle']); ?> </div>
+    </div>
+  <?php endif; ?>
+  <!-- /#full-width-middle -->
+  <?php if ($page['content_body_bottom']): ?>
+    <div id="content-body-bottom" class="container">
+      <div class="row-fluid content-body"> <?php print render($page['content_body_bottom']); ?> </div>
+    </div>
+  <?php endif; ?>
+  <!-- /#content-body-bottom -->
   <?php if ($page['fullwidth_bottom']): ?>
   <div id="fullwidth-bottom" class="row-fluid fullwidth">
     <div class="container"> <?php print render($page['fullwidth_bottom']); ?> </div>
