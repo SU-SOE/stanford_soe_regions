@@ -12,6 +12,7 @@
       <div class="container"> <?php print render($page['full_width_super_hero']); ?> </div>
     </div>
   <?php endif; ?>
+  <!-- /#full-width-super-hero -->
   <div id="global-header">
     <div class="container">
       <div class="row-fluid">
