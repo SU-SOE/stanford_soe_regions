@@ -1,8 +1,15 @@
 (function ($) {
   $(document).ready(function(){
     //Do Stuff...
-    //var megamenu = '<div>Yo, I\'m Stuff</div>';
-    //$('#fullwidth-top').append(megamenu);
+    //var megamenu = '<div class="dm-megamenu">Yo, I\'m Stuff</div>';
+    $('#digital-magazine-megamenu').insertAfter('#fullwidth-top');$('.dm-megamenu').css('display', 'none');
+    $('#digital-magazine-megamenu').css('display', 'none');
     //TODO: hook topics link to  dropdown action
+    $('.menu-name-menu-magazine ul a').first().click(function(e) {
+      e.preventDefault();
+      $('#digital-magazine-megamenu').toggle( "slow", function() {
+        // Animation complete.
+      });
+    });
   });
 })(jQuery);

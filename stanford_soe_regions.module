@@ -36,7 +36,7 @@ function stanford_soe_regions_define_regions() {
   $region['digital_magazine_megamenu'] = array(
     'title' => 'Digital Magazine Megamenu',
     'js' => drupal_get_path('module', 'stanford_soe_regions') . '/js/stanford_soe_regions_megamenu.js',
-    //'css' => drupal_get_path('module', 'stanford_soe_regions') . '/css/stanford_soe_regions.css',
+    'css' => drupal_get_path('module', 'stanford_soe_regions') . '/css/stanford_soe_regions_megamenu.css',
     'render_callback' => '_digital_magazine_megamenu_render_region',
   );
   return $region;
