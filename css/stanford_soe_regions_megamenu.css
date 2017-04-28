@@ -1,0 +1,15 @@
+#digital-magazine-megamenu {
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#digital-magazine-megamenu .container {
+  position: absolute;
+  width: 1170px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+ 
+}
