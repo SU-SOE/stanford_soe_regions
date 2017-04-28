@@ -7,7 +7,7 @@
     //TODO: hook topics link to  dropdown action
     $('.menu-name-menu-magazine ul a').first().click(function(e) {
       e.preventDefault();
-      $('#digital-magazine-megamenu').toggle( "slow", function() {
+      $('#digital-magazine-megamenu').slideToggle( "slow", function() {
         // Animation complete.
       });
     });
