@@ -8,7 +8,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'css/soe_helper.css': 'scss/soe_helper.scss'
+          'css/soe_regions.css': 'scss/soe_regions.scss'
         }
       }
     },
