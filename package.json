@@ -1,0 +1,25 @@
+{
+  "name": "stanford_soe_regions",
+  "description": "SCSS for School of Engineering custom regions.",
+  "author": "",
+  "version": "1.0.0",
+  "homepage": "https://github.com/SU-SOE/stanford_soe_regions#readme",
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "scss"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SU-SOE/stanford_soe_regions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SU-SOE/stanford_soe_regions/issues"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}
