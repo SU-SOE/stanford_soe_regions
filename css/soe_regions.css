@@ -1,0 +1,19 @@
+/* line 1, ../scss/components/_soe_dm_megamenu.scss */
+#digital-magazine-megamenu {
+  z-index: 9999; }
+
+/* line 4, ../scss/components/_soe_dm_megamenu.scss */
+#digital-magazine-megamenu .container {
+  position: absolute;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #9ca4ab; }
+
+/* line 15, ../scss/components/_soe_dm_megamenu.scss */
+.region-digital-magazine-megamenu {
+  width: 1170px; }

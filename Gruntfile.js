@@ -4,7 +4,8 @@ module.exports = function(grunt) {
     sass: {
       options: {
         lineNumbers: true,
-        sourcemap: 'none'
+        sourcemap: 'none',
+        keepSpecialComments: false
       },
       dist: {
         files: {
@@ -23,4 +24,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['stripCssComments']);
 }
