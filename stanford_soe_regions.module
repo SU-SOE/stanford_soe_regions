@@ -43,7 +43,7 @@ function stanford_soe_regions_define_regions() {
 }
 
 /**
- * Helper function for rendering the blocks in this region
+ * Helper function for rendering the blocks in this region.
  */
 function _full_width_super_hero_render_region($block_html, $block) {
   $renderable_block = _block_get_renderable_array(array($block));
@@ -52,7 +52,7 @@ function _full_width_super_hero_render_region($block_html, $block) {
 }
 
 /**
- * Helper function for rendering the blocks in this region
+ * Helper function for rendering the blocks in this region.
  */
 function _content_body_lower_render_region($block_html, $block) {
   $renderable_block = _block_get_renderable_array(array($block));
@@ -61,7 +61,7 @@ function _content_body_lower_render_region($block_html, $block) {
 }
 
 /**
- * Helper function for rendering the blocks in this region
+ * Helper function for rendering the blocks in this region.
  */
 function _full_width_middle_render_region($block_html, $block) {
   $renderable_block = _block_get_renderable_array(array($block));
@@ -70,7 +70,7 @@ function _full_width_middle_render_region($block_html, $block) {
 }
 
 /**
- * Helper function for rendering the blocks in this region
+ * Helper function for rendering the blocks in this region.
  */
 function _content_body_bottom_render_region($block_html, $block) {
   $renderable_block = _block_get_renderable_array(array($block));
@@ -79,7 +79,7 @@ function _content_body_bottom_render_region($block_html, $block) {
 }
 
 /**
- * Helper function for rendering the blocks in this region
+ * Helper function for rendering the blocks in this region.
  */
 function _digital_magazine_megamenu_render_region($block_html, $block) {
   $renderable_block = _block_get_renderable_array(array($block));
