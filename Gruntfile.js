@@ -3,13 +3,10 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     sass: {
       options: {
-        lineNumbers: true,
+        lineNumbers: false,
         sourcemap: 'none',
       },
       dist: {
-        options: {
-          lineNumbers: false
-        },
         files: {
           'css/soe_regions.css': 'scss/soe_regions.scss'
         }
