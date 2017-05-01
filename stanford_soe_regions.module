@@ -11,33 +11,39 @@
 function stanford_soe_regions_define_regions() {
   $region['full_width_super_hero'] = array(
     'title' => 'Full Width Super Hero',
-    //'js' => drupal_get_path('module', 'stanford_soe_regions') . '/js/stanford_soe_regions.js',
-    //'css' => drupal_get_path('module', 'stanford_soe_regions') . '/css/stanford_soe_regions.css',
+    //'js' => drupal_get_path('module', 'stanford_soe_regions') . '/js/soe_regions.js',
+    //'css' => drupal_get_path('module', 'stanford_soe_regions') . '/css/soe_regions.css',
     'render_callback' => '_full_width_super_hero_render_region',
   );
   $region['content_body_lower'] = array(
     'title' => 'Content Body Lower',
-    //'js' => drupal_get_path('module', 'stanford_soe_regions') . '/js/stanford_soe_regions.js',
-    //'css' => drupal_get_path('module', 'stanford_soe_regions') . '/css/stanford_soe_regions.css',
+    //'js' => drupal_get_path('module', 'stanford_soe_regions') . '/js/soe_regions.js',
+    //'css' => drupal_get_path('module', 'stanford_soe_regions') . '/css/soe_regions.css',
     'render_callback' => '_content_body_lower_render_region',
   );
   $region['full_width_middle'] = array(
     'title' => 'Full Width Middle',
-    //'js' => drupal_get_path('module', 'stanford_soe_regions') . '/js/stanford_soe_regions.js',
-    //'css' => drupal_get_path('module', 'stanford_soe_regions') . '/css/stanford_soe_regions.css',
+    //'js' => drupal_get_path('module', 'stanford_soe_regions') . '/js/soe_regions.js',
+    //'css' => drupal_get_path('module', 'stanford_soe_regions') . '/css/soe_regions.css',
     'render_callback' => '_full_width_middle_render_region',
   );
   $region['content_body_bottom'] = array(
     'title' => 'Content Body Lower',
     //'js' => drupal_get_path('module', 'stanford_soe_regions') . '/js/stanford_soe_regions.js',
-    //'css' => drupal_get_path('module', 'stanford_soe_regions') . '/css/stanford_soe_regions.css',
+    //'css' => drupal_get_path('module', 'stanford_soe_regions') . '/css/soe_regions.css',
     'render_callback' => '_content_body_bottom_render_region',
+  );
+  $region['digital_magazine_megamenu'] = array(
+    'title' => 'Digital Magazine Megamenu',
+    'js' => drupal_get_path('module', 'stanford_soe_regions') . '/js/stanford_soe_regions_megamenu.js',
+    'css' => drupal_get_path('module', 'stanford_soe_regions') . '/css/soe_regions.css',
+    'render_callback' => '_digital_magazine_megamenu_render_region',
   );
   return $region;
 }
 
 /**
- * Helper function for rendering the blocks in this region
+ * Helper function for rendering the blocks in this region.
  */
 function _full_width_super_hero_render_region($block_html, $block) {
   $renderable_block = _block_get_renderable_array(array($block));
@@ -46,7 +52,7 @@ function _full_width_super_hero_render_region($block_html, $block) {
 }
 
 /**
- * Helper function for rendering the blocks in this region
+ * Helper function for rendering the blocks in this region.
  */
 function _content_body_lower_render_region($block_html, $block) {
   $renderable_block = _block_get_renderable_array(array($block));
@@ -55,7 +61,7 @@ function _content_body_lower_render_region($block_html, $block) {
 }
 
 /**
- * Helper function for rendering the blocks in this region
+ * Helper function for rendering the blocks in this region.
  */
 function _full_width_middle_render_region($block_html, $block) {
   $renderable_block = _block_get_renderable_array(array($block));
@@ -64,9 +70,18 @@ function _full_width_middle_render_region($block_html, $block) {
 }
 
 /**
- * Helper function for rendering the blocks in this region
+ * Helper function for rendering the blocks in this region.
  */
 function _content_body_bottom_render_region($block_html, $block) {
+  $renderable_block = _block_get_renderable_array(array($block));
+  $output = drupal_render($renderable_block);
+  return $output;
+}
+
+/**
+ * Helper function for rendering the blocks in this region.
+ */
+function _digital_magazine_megamenu_render_region($block_html, $block) {
   $renderable_block = _block_get_renderable_array(array($block));
   $output = drupal_render($renderable_block);
   return $output;

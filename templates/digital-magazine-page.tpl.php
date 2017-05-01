@@ -113,6 +113,12 @@
       <div class="container"> <?php print render($page['fullwidth_top']); ?> </div>
     </div>
   <?php endif; ?>
+  
+  <?php if ($page['digital_magazine_megamenu']): ?>
+    <div id="digital-magazine-megamenu" class="row-fluid fullwidth">
+      <div class="container"> <?php print render($page['digital_magazine_megamenu']); ?> </div>
+    </div>
+  <?php endif; ?>
 
   <div id="main" class="clearfix main" role="main">
   	<?php if (!($is_front) && ($breadcrumb)): ?>
