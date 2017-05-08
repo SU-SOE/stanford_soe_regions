@@ -1,17 +1,35 @@
+@charset "UTF-8";
+
+////
+/// DIGITAL MAGAZINE MEGA MENU
+///
+
 #digital-magazine-megamenu {
   z-index: 9999;
-}
-#digital-magazine-megamenu .container {
-  position: absolute;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: $mm-background;
-}
-.region-digital-magazine-megamenu {
-  width: 1170px;
+
+  .container {
+    position: absolute;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $mega-menu-background;
+
+    .region-digital-magazine-megamenu {
+      width: 1170px;
+      padding: 30px 0;
+
+      .view-content {
+        display: flex;
+        flex-wrap: wrap;
+
+        .views-row {
+          width: calc(100% * (1/4) - 10px - 1px);
+        }
+      }
+    }
+  }
 }
