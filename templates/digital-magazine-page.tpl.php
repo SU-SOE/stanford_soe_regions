@@ -1,4 +1,4 @@
-<div id="wrap"><a href="#main" class="element-invisible element-focusable"><?php print t('Skip to content'); ?></a>
+<div id="wrap" class="<?php print $dm_global_header; ?>" ><a href="#main" class="element-invisible element-focusable"><?php print t('Skip to content'); ?></a>
   <?php if ($main_menu): ?>
   <a href="#main-nav" class="element-invisible element-focusable"><?php print t('Skip to navigation'); ?></a>
   <?php endif; ?>

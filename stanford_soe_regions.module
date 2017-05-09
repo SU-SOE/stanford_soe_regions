@@ -103,6 +103,11 @@ function stanford_soe_regions_preprocess_page(&$variables) {
   if (!path_is_admin(current_path())) {
     $variables['theme_hook_suggestions'][] = 'digital_magazine_page';
   }
+  $path_alias = drupal_get_path_alias(current_path());
+  $magazine_parts = explode('/', $path_alias);
+  if (in_array('magazine', $magazine_parts)) {
+    $variables['dm_global_header'] = 'dm-global-header';
+  }
 }
 
 /**
