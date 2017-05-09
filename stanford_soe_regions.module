@@ -108,6 +108,9 @@ function stanford_soe_regions_preprocess_page(&$variables) {
   if (in_array('magazine', $magazine_parts)) {
     $variables['dm_global_header'] = 'dm-global-header';
   }
+  else {
+    $variables['dm_global_header'] = '';
+  }
 }
 
 /**
