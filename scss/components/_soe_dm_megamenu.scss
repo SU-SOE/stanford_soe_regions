@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 ////
-/// DIGITAL MAGAZINE MEGA MENU
+/// DIGITAL MAGAZINE MEGA MENU REGION STRUCTURE
 ///
 
 #digital-magazine-megamenu {
@@ -16,20 +16,10 @@
     padding: 0;
     margin-left: auto;
     margin-right: auto;
-    background-color: $mega-menu-background;
 
     .region-digital-magazine-megamenu {
       width: 1170px;
       padding: 30px 0;
-
-      .view-content {
-        display: flex;
-        flex-wrap: wrap;
-
-        .views-row {
-          width: calc(100% * (1/4) - 10px - 1px);
-        }
-      }
     }
   }
 }
