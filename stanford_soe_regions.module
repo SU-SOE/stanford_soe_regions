@@ -28,7 +28,7 @@ function stanford_soe_regions_define_regions() {
     'render_callback' => '_full_width_middle_render_region',
   );
   $region['content_body_bottom'] = array(
-    'title' => 'Content Body Lower',
+    'title' => 'Content Body Bottom',
     //'js' => drupal_get_path('module', 'stanford_soe_regions') . '/js/stanford_soe_regions.js',
     //'css' => drupal_get_path('module', 'stanford_soe_regions') . '/css/soe_regions.css',
     'render_callback' => '_content_body_bottom_render_region',
@@ -150,13 +150,13 @@ function stanford_soe_regions_form_alter(&$form, &$form_state, $form_id) {
       '#tree',
       '#theme',
       'admin_shortcuts',
+      'full_width_super_hero',
       'global_header',
       'header',
       'navigation',
       'search_box',
       'digital_magazine_menu',
       'digital_magazine_megamenu',
-      'full_width_super_hero',
       'fullwidth_top',
       'main_top',
       'main_upper',
