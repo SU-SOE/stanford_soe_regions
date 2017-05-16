@@ -107,16 +107,22 @@
   </div>
   <!-- /#main-menu -->
   <?php endif; ?>
+
+  <?php if ($page['digital_magazine_menu']): ?>
+      <div id="digital-magazine-menu" class="row-fluid fullwidth">
+          <div class="container"> <?php print render($page['digital_magazine_menu']); ?> </div>
+      </div>
+  <?php endif; ?>
+
+  <?php if ($page['digital_magazine_megamenu']): ?>
+      <div id="digital-magazine-megamenu" class="row-fluid fullwidth">
+          <div class="container"> <?php print render($page['digital_magazine_megamenu']); ?> </div>
+      </div>
+  <?php endif; ?>
   
   <?php if ($page['fullwidth_top']): ?>
     <div id="fullwidth-top" class="row-fluid fullwidth">
       <div class="container"> <?php print render($page['fullwidth_top']); ?> </div>
-    </div>
-  <?php endif; ?>
-  
-  <?php if ($page['digital_magazine_megamenu']): ?>
-    <div id="digital-magazine-megamenu" class="row-fluid fullwidth">
-      <div class="container"> <?php print render($page['digital_magazine_megamenu']); ?> </div>
     </div>
   <?php endif; ?>
 
