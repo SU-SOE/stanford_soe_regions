@@ -33,6 +33,12 @@ function stanford_soe_regions_define_regions() {
     //'css' => drupal_get_path('module', 'stanford_soe_regions') . '/css/soe_regions.css',
     'render_callback' => '_content_body_bottom_render_region',
   );
+  $region['digital_magazine_menu'] = array(
+    'title' => 'Digital Magazine Menu',
+    //'js' => drupal_get_path('module', 'stanford_soe_regions') . '/js/stanford_soe_regions.js',
+    //'css' => drupal_get_path('module', 'stanford_soe_regions') . '/css/soe_regions.css',
+    'render_callback' => '_digital_magazine_menu_render_region',
+  );
   $region['digital_magazine_megamenu'] = array(
     'title' => 'Digital Magazine Megamenu',
     'js' => drupal_get_path('module', 'stanford_soe_regions') . '/js/stanford_soe_regions_megamenu.js',
@@ -73,6 +79,15 @@ function _full_width_middle_render_region($block_html, $block) {
  * Helper function for rendering the blocks in this region.
  */
 function _content_body_bottom_render_region($block_html, $block) {
+  $renderable_block = _block_get_renderable_array(array($block));
+  $output = drupal_render($renderable_block);
+  return $output;
+}
+
+/**
+ * Helper function for rendering the blocks in this region.
+ */
+function _digital_magazine_menu_render_region($block_html, $block) {
   $renderable_block = _block_get_renderable_array(array($block));
   $output = drupal_render($renderable_block);
   return $output;
@@ -123,4 +138,59 @@ function stanford_soe_regions_theme() {
       'render element' => 'page'
     ),
   );
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function stanford_soe_regions_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'ctools_export_ui_edit_item_form') {
+    //Since we are adding regions programmatically, we fix the order in the context reactions list here.
+    $order = array(
+      '#tree',
+      '#theme',
+      'admin_shortcuts',
+      'global_header',
+      'header',
+      'navigation',
+      'search_box',
+      'digital_magazine_menu',
+      'digital_magazine_megamenu',
+      'full_width_super_hero',
+      'fullwidth_top',
+      'main_top',
+      'main_upper',
+      'sidebar_first',
+      'highlighted',
+      'help',
+      'content_top',
+      'content_upper',
+      'content',
+      'content_row2',
+      'content_col2-1',
+      'content_col2-2',
+      'content_row3',
+      'content_col3-1',
+      'content_col3-2',
+      'content_col3-3',
+      'content_row4',
+      'content_col4-1',
+      'content_col4-2',
+      'content_col4-3',
+      'content_col4-4',
+      'content_lower',
+      'content_bottom',
+      'sidebar_second',
+      'main_lower',
+      'main_bottom',
+      'content_body_lower',
+      'full_width_middle',
+      'content_body_bottom',
+      'fullwidth_bottom',
+      'footer',
+    );
+    uksort($form['reactions']['plugins']['block']['blocks'], function($key1, $key2) use ($order) {
+      return (array_search($key1, $order) > array_search($key2, $order));
+    });
+  }
 }
