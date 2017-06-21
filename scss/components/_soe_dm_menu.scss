@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+////
+/// DIGITAL MAGAZINE MENU REGION STRUCTURE
+///
+
+#digital-magazine-menu {
+  z-index: 9999;
+
+  .container {
+    position: absolute;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    .region-digital-magazine-megamenu {
+      width: 1170px;
+      padding: 30px 0;
+    }
+  }
+}
