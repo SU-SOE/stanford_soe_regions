@@ -8,7 +8,7 @@
       if (windowSize < 768) {
         randi.html("Research <br>& Ideas");
         var dm_height = $('#digital-magazine-menu').height();
-        dm_search_input.on('click', function() {
+        dm_search_input.on('focus', function() {
           dm_search.css({
             'z-index' : '9999',
             'position' : 'absolute',
