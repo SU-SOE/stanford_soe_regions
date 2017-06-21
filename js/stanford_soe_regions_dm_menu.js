@@ -5,7 +5,6 @@
       var randi = $('#digital-magazine-menu .region-digital-magazine-menu .block-menu-block h2');
       var dm_search = $('#digital-magazine-menu .block-stanford-search-api');
       var dm_search_input = $('#digital-magazine-menu .block-stanford-search-api input[type="text"]');
-      console.log(windowSize);
       if (windowSize < 753) {
         randi.html("Research <br>& Ideas");
         var dm_height = $('#digital-magazine-menu').height();
@@ -30,6 +29,7 @@
       }
       if (windowSize > 752) {
         randi.html("Research & Ideas");
+        dm_search_input.unbind();
       }
     });
   });
