@@ -5,7 +5,7 @@
       var randi = $('#digital-magazine-menu .region-digital-magazine-menu .block-menu-block h2');
       var dm_search = $('#digital-magazine-menu .block-stanford-search-api');
       var dm_search_input = $('#digital-magazine-menu .block-stanford-search-api input[type="text"]');
-      if (windowSize < 753) {
+      if (windowSize < 767) {
         randi.html("Research <br>& Ideas");
         var dm_height = $('#digital-magazine-menu').height();
         dm_search_input.on('click', function() {
@@ -27,7 +27,7 @@
           });
         });
       }
-      if (windowSize > 752) {
+      if (windowSize > 766) {
         randi.html("Research & Ideas");
         dm_search_input.unbind();
       }
