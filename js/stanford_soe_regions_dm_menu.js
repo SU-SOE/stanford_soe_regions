@@ -30,14 +30,12 @@
       if (windowSize > 767) {
         randi.html("Research & Ideas");
         dm_search_input.unbind();
-        dm_search_input.blur(function() {
-          dm_search.css({
-            'z-index' : '',
-            'position' : 'relative',
-            'background' : 'none',
-            'width' : 'auto',
-            'height' : 'auto'
-          });
+        dm_search.css({
+          'z-index' : '',
+          'position' : 'relative',
+          'background' : 'none',
+          'width' : 'auto',
+          'height' : 'auto'
         });
       }
     });
