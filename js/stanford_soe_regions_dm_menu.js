@@ -16,8 +16,9 @@
           dm_search.css({
             'z-index' : '9999',
             'position' : 'absolute',
-            'background' : '#00ECE9',
-            'width' : '100%',
+            //moving the next two selectors to theme in stanford_soe_helper
+            //'background' : '#00ECE9',
+            //'width' : '100%',
             'height' : dm_height
           });
           if ($('.dm-search-close').length == 0) {
@@ -41,10 +42,11 @@
         dm_search_input.unbind();
         dm_search.css({
           'z-index' : '',
-          'position' : 'relative',
-          'background' : 'none',
-          'width' : 'auto',
-          'height' : 'auto'
+          'position' : 'relative'
+          //moving the next three selectors to theme in stanford_soe_helper
+          //'background' : 'none',
+          //'width' : 'auto',
+          //'height' : 'auto'
         });
         $('.dm-search-close').remove();
       }
