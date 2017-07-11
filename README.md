@@ -1,5 +1,5 @@
 #[Stanford SOE Regions](https://github.com/SU-SOE/stanford_soe_regions)
-##### Version: 7.x-1.x
+##### Version: 7.x-1.0-alpha1 
 
 Maintainers: [boznik](https://github.com/boznik)
 
