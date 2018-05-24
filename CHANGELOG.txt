@@ -1,5 +1,9 @@
 Stanford SOE Regions
 
+Version 7.x-1.0-dev                                                       2018-05-24
+--------------------------------------------------------------------------------
+- Fixing footer to match latest stanford_framework page.tpl.php
+
 Version 7.x-1.0-alpha1                                                    2017-07-11
 --------------------------------------------------------------------------------
 
