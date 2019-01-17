@@ -137,6 +137,10 @@ function stanford_soe_regions_theme() {
       'template' => 'templates/digital-magazine-page',
       'render element' => 'page'
     ),
+    'print__html' =>  array(
+      'template' => 'templates/print--html',
+      'render element' => 'page'
+    ),
   );
 }
 
