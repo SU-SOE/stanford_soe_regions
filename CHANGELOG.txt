@@ -1,5 +1,9 @@
 Stanford SOE Regions
 
+Version 7.x-1.0-alpha3                                                    2019-01-17
+--------------------------------------------------------------------------------
+- Adding print--html.tpl.php for the print 2.2 upgrade breaking things.
+
 Version 7.x-1.0-alpha2                                                    2018-05-24
 --------------------------------------------------------------------------------
 - Fixing footer to match latest stanford_framework page.tpl.php
